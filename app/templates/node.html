@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<h2>What do you requires? </h2>
+<h4>find the api details </h4>
+
+
+<h5>/tree<h5>
+<ul>
+<li>method 'GET': Get all tree</li>
+<li>method 'POST': Create node, @params:
+        name => name or data of the new node
+        parent => the wished parent id 
+</li>
+</ul>
+
+<h5>/edit<h5>
+<ul>
+<li>method 'POST': Move subtree selected to its new position, @params:
+        node => node id
+        destination => id of new parent node 
+</li>
+</ul>
+
+<h5>/view<h5>
+<ul>
+<li>method 'POST': Get children of given node, @params:
+        node => Current parent node id
+</li>
+</ul>
+
+{% endblock  %}
+
